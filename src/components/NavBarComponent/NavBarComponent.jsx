@@ -1,6 +1,6 @@
+import { Checkbox, Col, Rate, Row } from 'antd'
 import React from 'react'
-import { WrapperContent, WrapperLableText, WrapperTextValue, WrapperTextPrice } from './style'
-import { Checkbox, Rate } from 'antd'
+import { WrapperContent, WrapperLableText, WrapperTextPrice, WrapperTextValue } from './style'
 
 const NavBarComponent = () => {
     const onChange = () => { }
@@ -25,9 +25,9 @@ const NavBarComponent = () => {
             case 'star':
                 return options.map((option) => {
                     return (
-                        <div style={{display: 'flex'}}>
-                            <Rate style={{fontSize: '12px'}} disabled defaultValue={option} />
-                            <span>{`tu ${option} sao`}</span>
+                        <div style={{ dispaly: 'flex' }}>
+                            <Rate style={{ fontSize: '12px' }} disabled defaultValue={option} />
+                            <span> {`tu ${option}  sao`}</span>
                         </div>
                     )
                 })
@@ -41,23 +41,12 @@ const NavBarComponent = () => {
                 return {}
         }
     }
+
     return (
-        <div style = {{background: '#fff'}}>
-            <WrapperLableText>Lables</WrapperLableText>
+        <div>
+            <WrapperLableText>Lable</WrapperLableText>
             <WrapperContent>
-                {renderContent('text', ['Tu lanh', 'TV', 'MAYGIAT'])}
-            </WrapperContent>
-            <WrapperContent>
-                {renderContent('checkbox', [
-                    { value: 'a', label: 'A' },
-                    { value: 'b', label: 'B' }
-                ])}
-            </WrapperContent>
-            <WrapperContent>
-                {renderContent('star', [3, 4, 5])}
-            </WrapperContent>
-            <WrapperContent>
-                {renderContent('price', ['duoi 40', 'tren 50.000'])}
+                {renderContent('text', ['CPU', 'Mainboard', 'RAM'])}
             </WrapperContent>
         </div>
     )

@@ -4,28 +4,28 @@ import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 export const WrapperTypeProduct = styled.div`
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
     justify-content: flex-start;
-    border-bottom: 1px solid red;
     height: 44px;
 `
 
 export const WrapperButtonMore = styled(ButtonComponent)`
-    &:hover{
+    &:hover {
         color: #fff;
-        background: rgb(12, 92, 182) !important;
-        span{
+        background: #9255FD;
+        span {
             color: #fff;
         }
     }
     width: 100%;
+    color: #9255FD;
     text-align: center;
+    cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointers'}
 `
 
-export const WrapperProduct = styled.div`
+export const WrapperProducts = styled.div`
     display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
+    gap: 100px;
+    margin-top:30px;
     flex-wrap: wrap;
 `
